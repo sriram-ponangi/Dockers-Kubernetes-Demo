@@ -1,72 +1,64 @@
 # Dockers-Kubernetes-Demo
 
+# 1.] Dockers Demo:
 
-Creating an Image:
-===================================
-$ docker build -t angular .
+  ### Creating an Image:
 
-$ docker build -t nodejs .
+  $ docker build -t angular .
 
-$ docker build -t springboot .
+  $ docker build -t nodejs .
 
-Creating a new image with new tag to PUSH:
-==========================================
-$ docker tag springboot sriram5795/docker-demo-springboot
+  $ docker build -t springboot .
 
-$ docker tag nodejs-service sriram5795/docker-demo-nodejs
+  ### Creating a new image with new tag to PUSH:
 
-$ docker tag angular sriram5795/angular
+  $ docker tag springboot sriram5795/docker-demo-springboot
 
-Loging into dockerhub to push the image:
-===================================
-$ docker login
+  $ docker tag nodejs-service sriram5795/docker-demo-nodejs
 
-Push the image:
-===================================
-$ docker push sriram5795/docker-demo-springboot
+  $ docker tag angular sriram5795/angular
 
-$ docker push sriram5795/docker-demo-nodejs
+  ### Loging into dockerhub to push the image:
+  $ docker login
 
-$ docker push sriram5795/docker-demo-angular
+  ### Push the image:
+  $ docker push sriram5795/docker-demo-springboot
 
-To Stop and remove all containers:
-===================================
-$ docker stop $(docker ps -a -q)
+  $ docker push sriram5795/docker-demo-nodejs
 
-$ docker rm $(docker ps -a -q)
+  $ docker push sriram5795/docker-demo-angular
 
-Creating a network:
-===================================
-$ docker network create -d bridge mynetwork
+  ### To Stop and remove all containers:
+  $ docker stop $(docker ps -a -q)
 
-Creating a Volume:
-===================================
-$ docker volume create my-redis-data
+  $ docker rm $(docker ps -a -q)
 
-$ docker volume inspect  my-redis-data
+  ### Creating a network:
+  $ docker network create -d bridge mynetwork
 
-Running a container:
-===================================
-$ docker run -d -v  my-redis-data:/data --name redis --network mynetwork redis:alpine
+  ### Creating a Volume:
+  $ docker volume create my-redis-data
 
-$ docker run -d -v  my-redis-data:/data --name redis -p 6379:6379 redis:alpine --appendonly yes
+  $ docker volume inspect  my-redis-data
 
-$ docker run -d --name nodejs --network mynetwork sriram5795/docker-demo-nodejs
+  ### Running a container:
+  $ docker run -d -v  my-redis-data:/data --name redis --network mynetwork redis:alpine
 
-$ docker run -d --name springboot --network mynetwork sriram5795/docker-demo-springboot
+  $ docker run -d -v  my-redis-data:/data --name redis -p 6379:6379 redis:alpine --appendonly yes
 
-$ docker run -d -p 8080:80 --name angular --network mynetwork sriram5795/docker-demo-angular
+  $ docker run -d --name nodejs --network mynetwork sriram5795/docker-demo-nodejs
 
-$ docker run -d -p 3001:3000 --name nodejs --network mynetwork nodejs-service 
+  $ docker run -d --name springboot --network mynetwork sriram5795/docker-demo-springboot
 
-$ docker run -d -p 8081:8080 --name springboot --network mynetwork springboot
+  $ docker run -d -p 8080:80 --name angular --network mynetwork sriram5795/docker-demo-angular
 
-Execute commands in conatiner:
-===================================
-For Slim
----------
-$ docker exec -it container_id /bin/bash
+  $ docker run -d -p 3001:3000 --name nodejs --network mynetwork nodejs-service 
 
-For alpine
----------
-$ docker exec -it container_id /bin/ash
+  $ docker run -d -p 8081:8080 --name springboot --network mynetwork springboot
+
+  ### Execute commands in conatiner:
+  #### For Slim
+  $ docker exec -it container_id /bin/bash
+
+  #### For alpine
+  $ docker exec -it container_id /bin/ash
