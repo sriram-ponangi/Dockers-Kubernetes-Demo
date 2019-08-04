@@ -1,5 +1,7 @@
 # Dockers-Kubernetes-Demo
 
+![Architecture](https://github.com/sriram5795/Dockers-Kubernetes-Demo/blob/master/Architecture.PNG)
+
 # 1.] Dockers Demo:
 
   ### Creating an Image:
