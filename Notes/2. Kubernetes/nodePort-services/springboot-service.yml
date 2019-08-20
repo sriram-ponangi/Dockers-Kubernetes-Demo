@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: springboot-service
+  labels:
+    project: k8s-demo
+    app: springboot
+    type: microservice
+spec:
+  type: NodePort
+  ports:
+    -
+      name: api
+      port: 8080
+      nodePort: 30080
+  selector:
+    project: k8s-demo
+    app: springboot
+    type: microservice
+

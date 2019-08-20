@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-deployment
+  labels:
+    project: k8s-demo
+    app: angular
+    type: ui
+
+spec:
+  template:
+    metadata:
+      name: angular-app-pod
+      labels:
+        project: k8s-demo
+        app: angular
+        type: ui
+    spec:
+      containers:
+        - name: angular-app
+          image: sriram5795/docker-demo-angular
+          ports:
+          - containerPort: 80
+  replicas: 1
+  selector:
+    matchLabels:
+      project: k8s-demo
+      app: angular
+      type: ui

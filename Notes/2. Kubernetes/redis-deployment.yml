@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-deployment
+  labels:
+    project: k8s-demo
+    app: redis
+    type: db
+
+spec:
+  template:
+    metadata:
+      name: redis-pod
+      labels:
+        project: k8s-demo
+        app: redis
+        type: db
+    spec:
+      containers:
+        - name: redis
+          image: redis:alpine
+          ports:
+          - containerPort: 6379
+          volumeMounts:
+          - mountPath: "/data"
+            name: redis-data-vol
+      volumes:
+        - name: redis-data-vol
+          persistentVolumeClaim:
+            claimName: redis-pvc
+  replicas: 1
+  selector:
+    matchLabels:
+      project: k8s-demo
+      app: redis
+      type: db

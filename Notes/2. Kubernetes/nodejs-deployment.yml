@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+  labels:
+    project: k8s-demo
+    app: nodejs
+    type: microservice
+
+spec:
+  template:
+    metadata:
+      name: angular-app-pod
+      labels:
+        project: k8s-demo
+        app: nodejs
+        type: microservice
+    spec:
+      containers:
+        - name: nodejs-app
+          image: sriram5795/docker-demo-nodejs
+          ports:
+          - containerPort: 3000
+  replicas: 1
+  selector:
+    matchLabels:
+      project: k8s-demo
+      app: nodejs
+      type: microservice
