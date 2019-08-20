@@ -61,7 +61,7 @@
 
   $ docker run -d --name springboot --network mynetwork sriram5795/docker-demo-springboot
 ```
-  #### For Exposing the port on host machine(-p portMappingOnHost:appPortOnContainer) :
+  #### For Exposing the port on host machine(-p portMappingOnHost : appPortOnContainer) :
 ```  
   $ docker run -d -p 8080:80 --name angular --network mynetwork sriram5795/docker-demo-angular
 
