@@ -4,7 +4,7 @@
 
 # 1.] Dockers Demo:
 
-![Architecture](https://github.com/sriram5795/Dockers-Kubernetes-Demo/blob/master/Architecture.PNG)
+![Architecture](https://github.com/sriram5795/Dockers-Kubernetes-Demo/blob/master/Notes/1.%20Dockers/Architecture.PNG)
 
   ### Creating an Image:
 ```
