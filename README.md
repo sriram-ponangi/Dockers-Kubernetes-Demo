@@ -60,7 +60,9 @@
   $ docker run -d --name nodejs --network mynetwork sriram5795/docker-demo-nodejs
 
   $ docker run -d --name springboot --network mynetwork sriram5795/docker-demo-springboot
-
+```
+  #### For Exposing the port on host machine:
+```  
   $ docker run -d -p 8080:80 --name angular --network mynetwork sriram5795/docker-demo-angular
 
   $ docker run -d -p 3001:3000 --name nodejs --network mynetwork nodejs-service 
