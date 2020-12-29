@@ -10,7 +10,7 @@ kubectl create -f redis-pv.yml
 
 ### 2. Creating Persistent Volume Claim:
 ```
-kubectl create -f redis-pv.yml
+kubectl create -f redis-pvc.yml
 ```
 
 ## Creating Deployments and Services:
