@@ -10,3 +10,6 @@ spec:
   hostPath:
     path: /tmp/sriram/redis/data
   persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    name: redis-pvc
+    namespace: default
