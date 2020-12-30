@@ -10,7 +10,7 @@
     - YAML Manifest files for kubernetes objects.
     - Commands to deploy the pods, services, persistent volumes, etc.
     
-  - [ ] **[Service Mesh (Kubernetes + Istio + Envoy)]()**
+  - [X] **[Service Mesh (Kubernetes + Istio + Envoy)](https://github.com/sriram-ponangi/Dockers-Kubernetes-Demo/tree/master/Notes/3.%20Istio-Service-Mesh)**
  
  ### Applications / Code:
   - **[Backend / Microservices:](https://github.com/sriram-ponangi/dockers-k8s-demo-microservices)**
