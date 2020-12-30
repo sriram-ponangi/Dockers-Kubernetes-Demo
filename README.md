@@ -11,6 +11,8 @@
     - Commands to deploy the pods, services, persistent volumes, etc.
     
   - [X] **[Service Mesh (Kubernetes + Istio + Envoy)](https://github.com/sriram-ponangi/Dockers-Kubernetes-Demo/tree/master/Notes/3.%20Istio-Service-Mesh)**
+    - YAML Manifest files for Istio components as kubernetes objects and other monitoring tools like Kiali, Grafana, etc.
+    - Commands to deploy the pods, services, persistent volumes, etc. as ServiceMesh with Envoy as sidecar.
  
  ### Applications / Code:
   - **[Backend / Microservices:](https://github.com/sriram-ponangi/dockers-k8s-demo-microservices)**
