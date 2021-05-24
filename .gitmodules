@@ -1,6 +1,0 @@
-[submodule "dockers-k8s-demo-frontend"]
-	path = dockers-k8s-demo-frontend
-	url = https://github.com/sriram5795/dockers-k8s-demo-frontend.git
-[submodule "dockers-k8s-demo-microservices"]
-	path = dockers-k8s-demo-microservices
-	url = https://github.com/sriram5795/dockers-k8s-demo-microservices.git
