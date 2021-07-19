@@ -11,7 +11,7 @@
   - [X] **[Kubernetes](https://github.com/sriram-ponangi/Dockers-Kubernetes-Demo/tree/master/Notes/2.%20Kubernetes)**
     - Breif explanation of the overall architecture and YAML manifest files to run the kubernetes objects.
       - Commands to deploy the pods, services, persistent volumes, etc.    
-      - [X] **[Service Mesh (Kubernetes + Istio + Envoy)](https://github.com/sriram-ponangi/Dockers-Kubernetes-Demo/tree/master/Notes/3.%20Istio-Service-Mesh)**
+      - [X] **[Service Mesh (Kubernetes + Istio + Envoy)](https://github.com/sriram-ponangi/Dockers-Kubernetes-Serverless-Demo/tree/master/Notes/2.%20Kubernetes/Istio-Service-Mesh)**
         - YAML Manifest files for Istio components as kubernetes objects and other monitoring tools like Kiali, Grafana, etc.
         - Commands to deploy the pods, services, persistent volumes, etc. as ServiceMesh with Envoy as sidecar.
     - Applications Used:
